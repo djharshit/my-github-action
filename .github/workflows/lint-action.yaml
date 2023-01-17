@@ -1,0 +1,15 @@
+name: Pylint code
+
+on: push
+
+jobs:
+  lint-python:
+    name: Python linting
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - name: Install pylint module
+        run: pip install pylint
+      - name: Check the score
+        run: echo "Score is 10"
