@@ -1,5 +1,5 @@
 """
-Just a random number
+Just random number
 """
 
 import random
