@@ -14,7 +14,10 @@ jobs:
           C: 30
         run: echo Hello
       - name: Check the variables
+        env:
+          D: 40
         run: |
           echo "A $A"
           echo "B $B"
           echo "C $C"
+          echo "D $D"
