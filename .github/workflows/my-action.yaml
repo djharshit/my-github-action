@@ -21,3 +21,8 @@ jobs:
           echo "B $B"
           echo "C $C"
           echo "D $D"
+      - name: Set variables explicitly
+        run: echo "E=50" >> $GITHUB_ENV
+      - name: Check the explicit variable
+        run: |
+          echo "E $E"
