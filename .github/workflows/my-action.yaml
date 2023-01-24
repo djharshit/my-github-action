@@ -33,3 +33,16 @@ jobs:
           echo "C $C"
           echo "D $D"
           echo "E $E"
+      - name: Repo checkout
+        uses: actions/checkout@v3
+      - name: Generate a random number
+        run: |
+          N=$(python number.py)
+          echo "Number is $N"
+          if [ $N -gt 50 ]
+          then
+              echo "Number is greater than 50"
+          else
+              echo "Number is less than 50"
+          fi
+
