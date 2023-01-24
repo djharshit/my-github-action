@@ -1,0 +1,20 @@
+name: My Action
+on: push
+env:
+  A: 10
+jobs:
+  build:
+    name: My Action Job
+    runs-on: ubuntu-latest
+    env:
+      B: 20
+    steps:
+      - name: Set the variables
+        env:
+          C: 30
+        run: echo Hello
+      - name: Check the variables
+        run: |
+          echo "A $A"
+          echo "B $B"
+          echo "C $C"
