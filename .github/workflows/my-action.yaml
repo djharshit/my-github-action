@@ -41,12 +41,15 @@ jobs:
           echo "Number is $N"
           if [ $N -gt 50 ]
           then
-              echo "Number is greater than 50"
               echo "F=60" >> $GITHUB_ENV
           else
-              echo "Number is less than 50"
               echo "F=70" >> $GITHUB_ENV
           fi
-      - name: One more variable
+      - name: Greater than 50
+        if: ${{ env.F == 60 }}
         run: |
-          echo "F $F"
+          echo "Number is greater than 50"
+      - name: Less than 50
+        if: ${{ env.F == 70 }}
+        run: |
+          echo "Number is less than 50"
