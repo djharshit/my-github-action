@@ -26,3 +26,10 @@ jobs:
       - name: Check the explicit variable
         run: |
           echo "E $E"
+      - name: Check the variables again
+        run: |
+          echo "A $A"
+          echo "B $B"
+          echo "C $C"
+          echo "D $D"
+          echo "E $E"
