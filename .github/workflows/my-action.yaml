@@ -42,7 +42,11 @@ jobs:
           if [ $N -gt 50 ]
           then
               echo "Number is greater than 50"
+              echo "F=60" >> $GITHUB_ENV
           else
               echo "Number is less than 50"
+              echo "F=70" >> $GITHUB_ENV
           fi
-
+      - name: One more variable
+        run: |
+          echo "F $F"
