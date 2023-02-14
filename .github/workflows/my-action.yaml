@@ -1,7 +1,10 @@
 name: My Action
+
 on: push
+
 env:
   A: 10
+
 jobs:
   build:
     name: My Action Job
